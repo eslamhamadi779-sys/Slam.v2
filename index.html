@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
  
 <meta name="twitter:title" content="💞 SLAM | منصة الحب والصداقة 💞">
  
-<meta name="twitter:description" content="تواصل حقي، دردشة عشوائية هادفة، ومنشورات فيديو وقص قصيرة مجاناً.">
+<meta name="twitter:description" content="تواصل حقيقي ، دردشة عشوائية هادفة، ومنشورات فيديو وقصص قصيرة مجاناً.">
 
 <meta name="twitter:image" content="https://yourdomain.com/assets/images/og-image.jpg">
 
@@ -63,6 +64,7 @@
             </button>
         </div>
     </nav>
+
 
 
  <div class="main-layout">
@@ -129,7 +131,7 @@
   <div class="publish-box">
     
     <div class="post-header">
-      <img src="https://via.placeholder.com/40/ff1493/fff?text=💕" id="post-avatar">
+      <img src="https://via.placeholder.com/40/ff1493/fff?text=💕" id="post-avatar" alt="صورة الناشر">
       <textarea id="post-input" placeholder="💭 شارك مشاعرك الرومانسية... #SLAM #الحب" dir="rtl"></textarea>
     </div>
 
@@ -161,6 +163,8 @@
 
 </section>
 
+           
+           
 
             <!-- الصفحة الشخصية -->
 
@@ -170,15 +174,23 @@
                     <div class="profile-cover" id="profile-cover">
                         <i class="fas fa-heart-broken cover-icon"></i>
 
-                    </div>
-                    
-                    
-                    <div class="profile-avatar-large">
-                        <img src="" id="big-profile-img">
-                        <div class="edit-avatar" onclick="editProfilePhoto()">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                    </div>
+
+ </div>
+
+
+
+<div class="profile-avatar-large">
+
+ <img src="" id="big-profile-img" alt="صورة البروفايل">
+
+ <div class="edit-avatar" onclick="editProfilePhoto()">
+
+ <i class="fas fa-camera"></i>
+
+</div>
+
+</div>
+               
                     <div class="profile-info-large">
                         <h2 id="profile-full-name">الاسم الرومانسي</h2>
                         <p id="profile-status">💕 جاهز للحب الجديد</p>
@@ -260,8 +272,9 @@
                     </div>
                     <div id="random-result" style="display:none">
                         <div class="match-card">
-                            <img src="" id="random-user-img" class="match-avatar">
-                            <h3 id="random-user-name"></h3>
+<img src="" id="random-user-img" class="match-avatar" alt="صورة المستخدم">
+
+<h3 id="random-user-name"></h3>
                             <p id="random-user-bio"></p>
                             <div class="match-actions">
                                 <button class="like-btn" onclick="sendLike()">
@@ -316,6 +329,8 @@
     </div>
 
 
+
+
 <footer>
    <div class="footer-symbols">💔❤️‍🩹❤️‍🔥❣️💕💞💓💘💖💝</div>
     
@@ -335,7 +350,6 @@
 <p>إسلام الهاشمي © جميع الحقوق محفوظة 2026 | ESO 🚀</p>
 
 </footer>
-
 
 <script defer src="data.js?v=2"></script>
 <script defer src="script.js?v=2"></script>
