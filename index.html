@@ -46,37 +46,24 @@
 
 
 <body>
- <!-- الشريط العلوي -->
-    
- <nav class="navbar">   
-  <div class="logo" onclick="showSection('feed')">    
-   <i class="fas fa-heart"></i> SLAM 💕
+    <!-- الشريط العلوي -->
+    <nav class="navbar">
+        <div class="logo" onclick="showSection('feed')">
+            <i class="fas fa-heart"></i> SLAM 💕
         </div>
-  
-       
-  <div class="search-container">
-           
-   <i class="fas fa-search"></i>
-            
-   <input type="text" class="search-bar" id="searchInput" placeholder="🔍 ابحث عن أشخاص أو #هاشتاج أو مجموعات..." dir="rtl">
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" class="search-bar" id="searchInput" placeholder="🔍 ابحث عن أشخاص أو #هاشتاج أو مجموعات..." dir="rtl">
 
-       
-  </div>
+        </div>
+        <div class="nav-icons">
       
-  <div class="nav-icons">
-      
-     
-   <i class="fas fa-random random-btn" title="بحث عشوائي" onclick="randomMatch()" aria-label="بحث عشوائي"></i>
-          
-   <button id="login-btn" class="login-btn">
-               
-    <i class="fab fa-google"></i> تسجيل / دخول
-          
-   </button>
-       
-  </div>
-    
- </nav>
+      <i class="fas fa-random random-btn" title="بحث عشوائي" onclick="randomMatch()" aria-label="بحث عشوائي"></i>
+            <button id="login-btn" class="login-btn">
+                <i class="fab fa-google"></i> تسجيل / دخول
+            </button>
+        </div>
+    </nav>
 
 
 
@@ -91,16 +78,10 @@
  <div class="mini-profile" onclick="showSection('profile')">
 
 
-  <div class="profile-avatar">
-    
-    
-<img src="https://via.placeholder.com/80/ff69b4/ffffff?text=👤" id="user-img" alt="صورة المستخدم">
-
-
-   <div class="online-status"></div>
-
-              
-  </div>
+<div class="profile-avatar">
+  <img src="https://via.placeholder.com/80/ff69b4/ffffff?text=👤" id="user-img" alt="صورة المستخدم">
+  <div class="online-status"></div>
+</div>
                
 
  <div class="profile-info">
@@ -143,36 +124,47 @@
         <!-- المحتوى الرئيسي -->
         <main class="content-area">
             <!-- الصفحة الرئيسية -->
-            <section id="feed-section" class="app-section active">
-                <div class="publish-box">
-                    <div class="post-header">
-                        <img src="https://via.placeholder.com/40/ff1493/fff?text=💕" id="post-avatar">
-                       <textarea id="post-input" placeholder="💭 شارك مشاعرك الرومانسية... #SLAM #الحب" dir="rtl"></textarea>
+           
+           <section id="feed-section" class="app-section active">
 
-                    </div>
-                    <div class="post-actions">
-                        <label for="file-input" class="action-btn">
-                            <i class="fas fa-camera"></i>
-                        </label>
-                        <input type="file" id="file-input" accept="image/*,video/*" style="display:none">
-                        <button class="post-btn" id="publish-btn">
-                            <i class="fas fa-rocket"></i> نشر 💕
-                        </button>
-                    </div>
+  <!-- 1. صندوق النشر -->
+  <div class="publish-box">
+    
+    <div class="post-header">
+      <img src="https://via.placeholder.com/40/ff1493/fff?text=💕" id="post-avatar">
+      <textarea id="post-input" placeholder="💭 شارك مشاعرك الرومانسية... #SLAM #الحب" dir="rtl"></textarea>
+    </div>
 
+    <div class="post-actions">
+      <label for="file-input" class="action-btn">
+        <i class="fas fa-camera"></i>
+      </label>
+      <input type="file" id="file-input" accept="image/*,video/*" style="display:none">
+      
+      <button class="post-btn" id="publish-btn">
+        <i class="fas fa-rocket"></i> نشر 💕
+      </button>
 
-<!-- أضف الزر بجانب زر الكاميرا في صندوق النشر -->
-<button type="button" class="action-btn" title="إضافة رابط فيديو/منشور خارجي" onclick="promptLinkInput()" style="background:none; border:none; color:#ff1493; cursor:pointer;">
-    <i class="fas fa-link"></i>
-</button>
+      <button type="button" class="action-btn" title="إضافة رابط فيديو/منشور خارجي" onclick="promptLinkInput()" style="background:none; border:none; color:#ff1493; cursor:pointer;">
+        <i class="fas fa-link"></i>
+      </button>
+    </div>
 
-                </div>
-                <div class="stories-section">
-                    <h3>💫 القصص الرومانسية</h3>
-                    <div id="stories-container" class="stories-container"></div>
-                </div>
-                <div id="posts-container"></div>
-            </section>
+  </div> 
+
+  <!-- 2. القص بعد الصندوق -->
+  <div class="stories-section">
+    <h3>💫 القص الرومانسية</h3>
+    <div id="stories-container" class="stories-container"></div>
+  </div>
+
+  <!-- 3. البوستات تحت -->
+  <div id="posts-container"></div>
+
+</section>
+
+           
+           
 
             <!-- الصفحة الشخصية -->
 
@@ -181,11 +173,18 @@
                 <div class="profile-header">
                     <div class="profile-cover" id="profile-cover">
                         <i class="fas fa-heart-broken cover-icon"></i>
-<!-- أضف هذا السطر داخل الـ div الخاص بـ profile-stats -->
+                        
+                        
 
-<span class="karma-stat" title="تقييم السلوك الأخلاقي من المجتمع"><i class="fas fa-shield-alt" style="color: #4caf50;"></i> السمعة: <strong id="user-karma">100%</strong></span>
+
+
+
+
+
 
                     </div>
+                    
+                    
                     <div class="profile-avatar-large">
                         <img src="" id="big-profile-img">
                         <div class="edit-avatar" onclick="editProfilePhoto()">
@@ -196,12 +195,19 @@
                         <h2 id="profile-full-name">الاسم الرومانسي</h2>
                         <p id="profile-status">💕 جاهز للحب الجديد</p>
                         <div class="profile-stats">
+                          
+                          <span class="karma-stat" title="تقييم السلوك الأخلاقي من المجتمع"><i class="fas fa-shield-alt" style="color: #4caf50;"></i> السمعة: <strong id="user-karma">100%</strong></span>
+                          
                             <span><strong id="posts-count">0</strong> منشور</span>
                             <span><strong id="friends-count">0</strong> صديق</span>
                             <span><strong id="groups-count">0</strong> مجموعة</span>
+                            
                         </div>
+                        
                     </div>
+                    
                 </div>
+                
                 <div class="profile-tabs">
                     <button class="tab-btn active" onclick="showProfileTab('posts')">المنشورات</button>
                     <button class="tab-btn" onclick="showProfileTab('friends')">الأصدقاء</button>
@@ -315,8 +321,7 @@
 
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h3>إنشاء مجموعة جديدة</h3>
-            <input type="text" id="group-name" placeholder="اسم المجموعة">
+            <h3 id="group-modal-title">إنشاء مجموعة جديدة</h3>            <input type="text" id="group-name" placeholder="اسم المجموعة">
             <textarea id="group-desc" placeholder="وصف المجموعة"></textarea>
             <button onclick="saveGroup()">إنشاء المجموعة 💕</button>
         </div>
