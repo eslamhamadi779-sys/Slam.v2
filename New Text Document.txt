@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#E91E63">
+ 
+<title>💕 SLAM | منصة الحب والصداقة والزواج المجاني 💕</title>
+ 
+<meta name="description" content="منصة سلام 💞 - أول منصة عربية مجانية تماماً للتواصل، الصداقة، والزواج بخصوصية تامة. انضم الآن مجاناً وبدون اشتراكات خفية.">
+<meta name="keywords" content="زواج، صداقة، تعارف مجاني، منصة سلام، تواصل اجتماعي، غرف دردشة">
+<meta name="author" content="ESO Company">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="💞 SLAM | منصة الحب والصداقة والحرية الأخلاقية 💞">
+<meta property="og:description" content="تواصل بحرية، ابحث عن شريك حياتك أو أصدقاء يشبهونك مجاناً وبدون اشتراكات خفية.">
+
+
+
+<meta property="og:image" content="https://yourdomain.com/assets/images/og-image.jpg">
+ 
+<meta property="og:url" content="https://yourdomain.com">
+<meta property="og:site_name" content="SLAM">
+ 
+ 
+<meta name="twitter:card" content="summary_large_image">
+ 
+<meta name="twitter:title" content="💞 SLAM | منصة الحب والصداقة 💞">
+ 
+<meta name="twitter:description" content="تواصل حقي، دردشة عشوائية هادفة، ومنشورات فيديو وقص قصيرة مجاناً.">
+
+<meta name="twitter:image" content="https://yourdomain.com/assets/images/og-image.jpg">
+
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+ 
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <!-- الشريط العلوي -->
+    <nav class="navbar">
+        <div class="logo" onclick="showSection('feed')">
+            <i class="fas fa-heart"></i> SLAM 💕
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" class="search-bar" id="searchInput" placeholder="🔍 ابحث عن أشخاص أو #هاشتاج أو مجموعات..." dir="rtl">
+
+        </div>
+        <div class="nav-icons">
+      
+      <i class="fas fa-random random-btn" title="بحث عشوائي" onclick="randomMatch()" aria-label="بحث عشوائي"></i>
+            <button id="login-btn" class="login-btn">
+                <i class="fab fa-google"></i> تسجيل / دخول
+            </button>
+        </div>
+    </nav>
+
+
+
+ <div class="main-layout">
+
+
+  <!-- الشريط الجانبي -->
+
+ <aside class="sidebar">
+
+
+ <div class="mini-profile" onclick="showSection('profile')">
+
+
+  <div class="profile-avatar">
+    
+    
+<img src="https://via.placeholder.com/80/ff69b4/ffffff?text=👤" id="user-img" alt="صورة المستخدم">
+
+
+   <div class="online-status"></div>
+
+              
+  </div>
+               
+
+ <div class="profile-info">
+                    
+<h3 id="user-name">زائر غير مسجل</h3>
+                 
+   <p id="user-bio">💕 ابدأ رحلتك الرومانسية مع SLAM</p>
+                 
+   <span class="status">غير متصل</span>
+             
+   </div>
+          
+  </div>
+            
+            <nav class="menu">
+                <button onclick="showSection('feed')" class="menu-item active">
+                    <i class="fas fa-home"></i> الرئيسية
+                </button>
+                <button onclick="showSection('profile')" class="menu-item">
+                    <i class="fas fa-user"></i> صفحتي
+                </button>
+                <button onclick="showSection('messages')" class="menu-item">
+                    <i class="fas fa-comments"></i> الرسائل
+                </button>
+                <button onclick="showSection('groups')" class="menu-item">
+                    <i class="fas fa-users"></i> المجموعات
+                </button>
+                <button onclick="showSection('random')" class="menu-item">
+                    <i class="fas fa-dice"></i> بحث عشوائي
+                </button>
+                <button onclick="showSection('discover')" class="menu-item">
+                    <i class="fas fa-heart"></i> اكتشف
+                </button>
+                <button onclick="showSection('settings')" class="menu-item">
+                    <i class="fas fa-cog"></i> الإعدادات
+                </button>
+            </nav>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content-area">
+            <!-- الصفحة الرئيسية -->
+            <section id="feed-section" class="app-section active">
+                <div class="publish-box">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40/ff1493/fff?text=💕" id="post-avatar">
+                       <textarea id="post-input" placeholder="💭 شارك مشاعرك الرومانسية... #SLAM #الحب" dir="rtl"></textarea>
+
+                    </div>
+                    <div class="post-actions">
+                        <label for="file-input" class="action-btn">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                        <input type="file" id="file-input" accept="image/*,video/*" style="display:none">
+                        <button class="post-btn" id="publish-btn">
+                            <i class="fas fa-rocket"></i> نشر 💕
+                        </button>
+                    </div>
+
+
+<!-- أضف الزر بجانب زر الكاميرا في صندوق النشر -->
+<button type="button" class="action-btn" title="إضافة رابط فيديو/منشور خارجي" onclick="promptLinkInput()" style="background:none; border:none; color:#ff1493; cursor:pointer;">
+    <i class="fas fa-link"></i>
+</button>
+
+                </div>
+                <div class="stories-section">
+                    <h3>💫 القصص الرومانسية</h3>
+                    <div id="stories-container" class="stories-container"></div>
+                </div>
+                <div id="posts-container"></div>
+            </section>
+
+            <!-- الصفحة الشخصية -->
+
+
+            <section id="profile-section" class="app-section">
+                <div class="profile-header">
+                    <div class="profile-cover" id="profile-cover">
+                        <i class="fas fa-heart-broken cover-icon"></i>
+<!-- أضف هذا السطر داخل الـ div الخاص بـ profile-stats -->
+
+<span class="karma-stat" title="تقييم السلوك الأخلاقي من المجتمع"><i class="fas fa-shield-alt" style="color: #4caf50;"></i> السمعة: <strong id="user-karma">100%</strong></span>
+
+                    </div>
+                    <div class="profile-avatar-large">
+                        <img src="" id="big-profile-img">
+                        <div class="edit-avatar" onclick="editProfilePhoto()">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info-large">
+                        <h2 id="profile-full-name">الاسم الرومانسي</h2>
+                        <p id="profile-status">💕 جاهز للحب الجديد</p>
+                        <div class="profile-stats">
+                            <span><strong id="posts-count">0</strong> منشور</span>
+                            <span><strong id="friends-count">0</strong> صديق</span>
+                            <span><strong id="groups-count">0</strong> مجموعة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-tabs">
+                    <button class="tab-btn active" onclick="showProfileTab('posts')">المنشورات</button>
+                    <button class="tab-btn" onclick="showProfileTab('friends')">الأصدقاء</button>
+                    <button class="tab-btn" onclick="showProfileTab('photos')">الصور</button>
+                </div>
+                <div id="profile-posts-container"></div>
+                <div id="profile-friends-container" style="display:none"></div>
+                <div id="profile-photos-container" style="display:none"></div>
+            </section>
+
+            <!-- الرسائل -->
+            <section id="messages-section" class="app-section">
+                <div class="messages-header">
+                    <h2><i class="fas fa-comments"></i> الرسائل الخاصة</h2>
+                    <button class="new-chat-btn" onclick="createNewChat()">
+                        <i class="fas fa-plus"></i> محادثة جديدة
+                    </button>
+                </div>
+                <div class="chats-list" id="chats-list"></div>
+                <div class="chat-window" id="chat-window" style="display:none">
+                    <div class="chat-header">
+                        <img src="" class="chat-avatar" id="chat-avatar">
+                        <div>
+                            <h3 id="chat-name"></h3>
+                            <span id="chat-status"></span>
+                        </div>
+                        <button class="chat-video-btn">
+                            <i class="fas fa-video"></i>
+                        </button>
+                    </div>
+                    <div class="messages-container" id="messages-container"></div>
+                    <div class="message-input-container">
+                       <input type="text" id="message-input" placeholder="اكتب رسالتك... 💕" dir="rtl">
+                        <button id="send-message-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- المجموعات -->
+            <section id="groups-section" class="app-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> المجموعات الرومانسية</h2>
+                    <button class="create-group-btn" onclick="createGroup()">
+                        <i class="fas fa-plus"></i> مجموعة جديدة
+                    </button>
+                </div>
+                <div class="groups-grid" id="groups-container"></div>
+            </section>
+
+            <!-- البحث العشوائي -->
+            <section id="random-section" class="app-section">
+                <div class="random-section">
+                    <div class="random-card">
+                        <i class="fas fa-dice-five"></i>
+                        <h2>🎲 البحث العشوائي</h2>
+                        <p>ابحث عن شريك حياتك بشكل عشوائي!</p>
+                        <button class="random-btn-large" onclick="startRandomMatch()">
+                            ابدأ البحث <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div id="random-result" style="display:none">
+                        <div class="match-card">
+                            <img src="" id="random-user-img" class="match-avatar">
+                            <h3 id="random-user-name"></h3>
+                            <p id="random-user-bio"></p>
+                            <div class="match-actions">
+                                <button class="like-btn" onclick="sendLike()">
+                                    <i class="fas fa-heart"></i> إعجاب
+                                </button>
+                                <button class="chat-btn" onclick="startChatWithRandom()">
+                                    <i class="fas fa-comments"></i> دردشة
+                                </button>
+                                <button class="next-btn" onclick="nextRandom()">
+                                    <i class="fas fa-forward"></i> التالي
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- اكتشف -->
+            <section id="discover-section" class="app-section">
+                <h2>✨ اكتشف أشخاص جدد</h2>
+                <div class="discover-grid" id="discover-container"></div>
+            </section>
+
+            <!-- الإعدادات -->
+            <section id="settings-section" class="app-section">
+                <h2><i class="fas fa-cog"></i> الإعدادات</h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <label>الخصوصية</label>
+                        <select>
+                            <option>عامة</option>
+                            <option>الأصدقاء</option>
+                            <option>خاصة</option>
+                        </select>
+                    </div>
+                    <!-- المزيد من الإعدادات -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal للمجموعات -->
+
+<div id="group-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="group-modal-title">
+
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>إنشاء مجموعة جديدة</h3>
+            <input type="text" id="group-name" placeholder="اسم المجموعة">
+            <textarea id="group-desc" placeholder="وصف المجموعة"></textarea>
+            <button onclick="saveGroup()">إنشاء المجموعة 💕</button>
+        </div>
+    </div>
+
+
+
+
+<footer>
+   <div class="footer-symbols">💔❤️‍🩹❤️‍🔥❣️💕💞💓💘💖💝</div>
+    
+    <!--div الروابط-->
+
+    <div class="footer-links">
+        <a href="https://www.facebook.com/eslam.bahrya/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.noor-book.com/u/Eslam-Hamadi-Hashimi/books" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Noor Book</a>
+        <a href="https://www.tiktok.com/@eslamhamadi5" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://www.ktobati.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D9%82%D8%B5%D8%B5-%D9%82%D8%B5%D9%8A%D8%B1%D8%A9-0" target="_blank" rel="noopener noreferrer"><i class="fas fa-feather-alt"></i> Ktobati</a>
+        <a href="https://github.com/eslamhamadi779-sys" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://eslamhamadi779-sys.github.io/Heba-fitness-style/" target="_blank" rel="noopener noreferrer"><i class="fas fa-dumbbell"></i> Heba Fitness</a>
+        <a href="https://eslamhamadi779-sys.github.io/Moon-Gate/" target="_blank" rel="noopener noreferrer"><i class="fas fa-moon"></i> MoonGate</a>
+    </div>
+
+
+<p>إسلام الهاشمي © جميع الحقوق محفوظة 2026 | ESO 🚀</p>
+
+</footer>
+
+
+<script defer src="data.js?v=2"></script>
+<script defer src="script.js?v=2"></script>
+
+</body>
+
+</html>
+
