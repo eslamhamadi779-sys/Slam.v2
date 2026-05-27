@@ -1,0 +1,16 @@
+SLAM/
+│
+├── index.html
+├── style.css
+├── app.js
+│
+├── algorithms/
+│   └── algorithm.js
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── data/
+│
+└── backup/
