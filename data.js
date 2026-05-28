@@ -1,1 +1,2 @@
-
+const users = [];
+const posts = [];
