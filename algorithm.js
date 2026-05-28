@@ -1,1 +1,1 @@
-
+console.log("Algorithm ready");
