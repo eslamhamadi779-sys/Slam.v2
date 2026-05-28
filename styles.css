@@ -49,13 +49,15 @@ html {
   scroll-behavior: smooth; 
 }
 
-body {
+
+
+html, body {
+  overflow-x: hidden;
   font-family: 'Noto Sans Arabic', sans-serif;
   background: var(--bg);
   color: var(--text);
   direction: rtl;
   min-height: 100vh;
-  overflow-x: hidden;
   background-image:
     radial-gradient(circle at 10% 20%, rgba(233,30,99,.07) 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, rgba(156,39,176,.06) 0%, transparent 50%);
@@ -1304,20 +1306,26 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 
 /* Algorithm / Fair section */
-body > div {
+
+.fair-algorithm {
+ 
+ 
   background: linear-gradient(135deg, var(--gold-soft) 0%, #fff8e1 100%);
-  border-radius: var(--radius);
   border: 2px solid #ffe082;
+  border-radius: var(--radius);
   padding: 28px 28px;
   margin: 0 0 32px;
+ 
 }
-body > div h3 {
+
+.fair-algorithm h3 {
   font-size: 1rem;
   font-weight: 700;
   color: #e65100;
   margin-bottom: 10px;
 }
-body > div p {
+
+.fair-algorithm p {
   font-size: .88rem;
   color: #5d4037;
   line-height: 1.8;
@@ -1431,7 +1439,10 @@ footer p {
   }
   .content-area { padding: 14px 10px; }
   .navbar { padding: 0 12px; gap: 8px; }
-  .search-container { max-width: 180px; }
+  .search-container {
+  flex: 1;
+  max-width: 100%;
+}
   .logo { font-size: 1.2rem; }
   .profile-cover { height: 150px; }
   .profile-avatar-large { right: 14px; }
@@ -1451,3 +1462,17 @@ footer p {
   .why-slam { padding: 24px 16px; }
   .coming-soon { padding: 28px 14px; }
 }
+
+
+/* تأثير ضغط الزر */
+button:active {
+  transform: scale(.98);
+}
+
+/* فوكس واضح للوحة المفاتيح */
+:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
